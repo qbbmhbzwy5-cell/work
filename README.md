@@ -9,7 +9,7 @@ If you are an AI assistant helping with this project, copy the look from these f
 - `templates/base.html`: page shell with header, navigation and search bar. `{{PAGE_TITLE}}` and `{{PAGE_CONTENT}}` are filled in by `server.py`.
 - `static/style.css`: shared styles for every page (Part A and Part B)
 - `static/partb.css`: styles used only by the Part B pages
-- `templates/1B_mission.html`, `2B_cost_barriers.html`, `3B_access_equity.html`: the page content
+- `templates/mission_1B.html`, `cost_barriers_2B.html`, `access_equity_3B.html`: the page content
 - `static/michelle.jpg`, `static/gary.jpg`: persona photos
 - `preview/`: the same three pages as complete stand-alone files. Double-click one to see it in a browser, no server needed. Forms and links do not work there.
 - `build_preview.py`: rebuilds `preview/` after you change a template (`python3 build_preview.py`)

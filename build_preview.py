@@ -2,10 +2,14 @@
 # by double-clicking, without running server.py.
 # Run it from the project folder:  python3 build_preview.py
 
+import os
+
+os.makedirs("preview", exist_ok=True)
+
 pages = [
-    ("Our Mission", "1B_mission.html"),
-    ("Cost barriers to care", "2B_cost_barriers.html"),
-    ("Access and equity", "3B_access_equity.html"),
+    ("Our Mission", "mission_1B.html"),
+    ("Cost barriers to care", "cost_barriers_2B.html"),
+    ("Access and equity", "access_equity_3B.html"),
 ]
 
 with open("templates/base.html") as f:
@@ -17,8 +21,8 @@ for title, name in pages:
     page = base.replace("{{PAGE_TITLE}}", title).replace("{{PAGE_CONTENT}}", content)
     page = page.replace('href="/static/', 'href="../static/')
     page = page.replace('src="/static/', 'src="../static/')
-    page = page.replace('"/cost-barriers"', '"2B_cost_barriers.html"')
-    page = page.replace('"/access-equity"', '"3B_access_equity.html"')
+    page = page.replace('"/cost-barriers"', '"cost_barriers_2B.html"')
+    page = page.replace('"/access-equity"', '"access_equity_3B.html"')
     page = page.replace('<a href="/">', '<a href="#">')
     with open("preview/" + name, "w") as f:
         f.write(page)
