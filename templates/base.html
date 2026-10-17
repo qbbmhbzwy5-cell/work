@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{PAGE_TITLE}}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo">Logo</div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="#">Explore</a>
+        <a href="#">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <form class="search" action="#">
+      <input type="search" name="q" placeholder="Search for a topic" title="Search the site">
+      <button type="button" class="button">Search</button>
+    </form>
+
+    {{PAGE_CONTENT}}
+  </main>
+</body>
+</html>

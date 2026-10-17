@@ -1,0 +1,116 @@
+/* Shared styles: used by every page (Part A and Part B) */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Atkinson Hyperlegible', Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  background-color: #eef3f7;
+  color: #14262e;
+}
+
+a {
+  color: #1b6b4f;
+}
+
+select, input, button {
+  font-family: inherit;
+}
+
+select:focus, input:focus, button:focus, a:focus {
+  outline: 3px solid #f2a900;
+  outline-offset: 2px;
+}
+
+th, td {
+  text-align: left;
+}
+
+/* Header, navigation and search bar */
+
+header {
+  background-color: white;
+  border-bottom: 1px solid #c9d6de;
+}
+
+.header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  width: 120px;
+  height: 56px;
+  border: 2px dashed #14262e;
+  text-align: center;
+  line-height: 52px;
+  font-weight: bold;
+}
+
+nav a {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #14262e;
+  text-decoration: none;
+  border-radius: 28px;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+main section, main form {
+  margin-bottom: 28px;
+}
+
+.search {
+  display: flex;
+  gap: 12px;
+}
+
+.search input {
+  flex: 1;
+  height: 56px;
+  font-size: 20px;
+  padding: 0 20px;
+  border: 2px solid #5b7280;
+  border-radius: 28px;
+  background-color: white;
+  color: #14262e;
+}
+
+.button {
+  display: inline-block;
+  height: 56px;
+  line-height: 52px;
+  padding: 0 32px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: white;
+  color: #14262e;
+  border: 2px solid #14262e;
+  border-radius: 28px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.button:hover {
+  text-decoration: underline;
+}

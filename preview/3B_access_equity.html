@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Access and equity</title>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo">Logo</div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Explore</a>
+        <a href="#">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <form class="search" action="#">
+      <input type="search" name="q" placeholder="Search for a topic" title="Search the site">
+      <button type="button" class="button">Search</button>
+    </form>
+
+    <link rel="stylesheet" href="../static/partb.css">
+
+<section>
+  <h1>Access and equity</h1>
+  <p class="lead">Compare two groups to see who misses out on care.</p>
+  <p>Follow the three steps, then press Discover.</p>
+</section>
+
+<section>
+  <h2>Choose your groups</h2>
+  <div class="help">
+    <h3>Help with these choices</h3>
+    <p>Steps 1 and 2 pick two kinds of care that people may have delayed because of cost. We compare people who delayed both with people who delayed only the first. Step 3 picks which people to look at.</p>
+  </div>
+
+  <form action="3B_access_equity.html" method="get">
+
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-body">
+        <label class="step-title" for="service1">Service 1: which care did they delay because of cost?</label>
+        <select id="service1" name="service1">
+          <option value="">Choose a service</option>
+          <option value="gp" selected>GP</option>
+          <option value="specialist">Specialist</option>
+          <option value="dental">Dental</option>
+          <option value="mental-health">Mental health</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-body">
+        <label class="step-title" for="service2">Service 2: which care did they also delay?</label>
+        <select id="service2" name="service2">
+          <option value="">Choose a service</option>
+          <option value="gp">GP</option>
+          <option value="specialist" selected>Specialist</option>
+          <option value="dental">Dental</option>
+          <option value="mental-health">Mental health</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-body">
+        <div class="step-title">Who do you want to look at?</div>
+        <div class="fields">
+          <div class="field">
+            <label for="age">Age group</label>
+            <select id="age" name="age">
+              <option value="all">All ages</option>
+              <option value="45-64">45 to 64</option>
+              <option value="65-74" selected>65 to 74</option>
+              <option value="75-plus">75 and over</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="condition">Long-term condition</label>
+            <select id="condition" name="condition">
+              <option value="all">All conditions</option>
+              <option value="heart-disease" selected>Heart disease</option>
+              <option value="diabetes">Diabetes</option>
+              <option value="arthritis">Arthritis</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="submit" class="button button-big button-main">Discover</button>
+      <a class="button button-big" href="3B_access_equity.html">Reset</a>
+    </div>
+    <!-- MESSAGE: Python will show this later when Service 2 is empty or the same as Service 1: "Please choose a second service." -->
+    <p class="hint">Reset clears all your choices and shows the page as it first opened.</p>
+    <p class="hint">To print your result, press Ctrl+P (Windows) or Cmd+P (Mac).</p>
+
+  </form>
+</section>
+
+<section>
+  <h2>Your results</h2>
+  <!-- SAMPLE: this line comes from the database later -->
+  <p>Showing results for: GP and specialist, ages 65 to 74, heart disease (212 people)</p>
+
+  <!-- SAMPLE: names, counts and percentages are made-up numbers -->
+  <div class="profile-row">
+    <div class="profile">
+      <h3>Delayed both services</h3>
+      <p class="count">64 people</p>
+      <div class="measure">
+        <div class="measure-label"><span>In the lowest income group</span><strong>46%</strong></div>
+        <div class="bar"><div class="bar-fill fill-orange" style="width: 46%"></div></div>
+      </div>
+      <div class="measure">
+        <div class="measure-label"><span>With private health insurance</span><strong>21%</strong></div>
+        <div class="bar"><div class="bar-fill fill-orange" style="width: 21%"></div></div>
+      </div>
+      <div class="measure">
+        <div class="measure-label"><span>With 2 or more long-term conditions</span><strong>68%</strong></div>
+        <div class="bar"><div class="bar-fill fill-orange" style="width: 68%"></div></div>
+      </div>
+    </div>
+
+    <div class="profile">
+      <h3>Delayed the first service only</h3>
+      <p class="count">148 people</p>
+      <div class="measure">
+        <div class="measure-label"><span>In the lowest income group</span><strong>28%</strong></div>
+        <div class="bar"><div class="bar-fill fill-green" style="width: 28%"></div></div>
+      </div>
+      <div class="measure">
+        <div class="measure-label"><span>With private health insurance</span><strong>39%</strong></div>
+        <div class="bar"><div class="bar-fill fill-green" style="width: 39%"></div></div>
+      </div>
+      <div class="measure">
+        <div class="measure-label"><span>With 2 or more long-term conditions</span><strong>52%</strong></div>
+        <div class="bar"><div class="bar-fill fill-green" style="width: 52%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>What this shows</h2>
+  <!-- SAMPLE: placeholder wording, write the real explanation from the real result -->
+  <p>In this sample, people who delayed both services were more likely to be in the lowest income group and less likely to have private health insurance than people who delayed only the first.</p>
+  <details>
+    <summary>And how we worked this out</summary>
+    <p>We took everyone who delayed Service 1 because of cost. We split them into those who also delayed Service 2 and those who did not. Then we compared the two groups on income, private health insurance and long-term conditions.</p>
+  </details>
+</section>
+
+  </main>
+</body>
+</html>

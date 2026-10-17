@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cost barriers to care</title>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo">Logo</div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Explore</a>
+        <a href="#">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <form class="search" action="#">
+      <input type="search" name="q" placeholder="Search for a topic" title="Search the site">
+      <button type="button" class="button">Search</button>
+    </form>
+
+    <link rel="stylesheet" href="../static/partb.css">
+
+<section>
+  <h1>Cost barriers to care</h1>
+  <p class="lead">Filter the data to see who delays care because of cost.</p>
+  <p>Follow the three steps, then press Apply.</p>
+</section>
+
+<section>
+  <h2>Filter</h2>
+  <div class="help">
+    <h3>Help with these choices</h3>
+    <p>Step 1 picks the kind of care. Step 2 picks the people you want to look at. Step 3 picks how to compare them and how to order the results.</p>
+  </div>
+
+  <form action="2B_cost_barriers.html" method="get">
+
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-body">
+        <label class="step-title" for="service">What kind of care?</label>
+        <select id="service" name="service">
+          <option value="gp">GP</option>
+          <option value="specialist" selected>Specialist</option>
+          <option value="dental">Dental</option>
+          <option value="mental-health">Mental health</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-body">
+        <div class="step-title">Who do you want to look at?</div>
+        <div class="fields">
+          <div class="field">
+            <label for="age">Age group</label>
+            <select id="age" name="age">
+              <option value="all">All ages</option>
+              <option value="45-64">45 to 64</option>
+              <option value="65-74" selected>65 to 74</option>
+              <option value="75-plus">75 and over</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="area">Where people live</label>
+            <select id="area" name="area">
+              <option value="all" selected>All areas</option>
+              <option value="major-cities">Major cities</option>
+              <option value="inner-regional">Inner regional</option>
+              <option value="outer-regional">Outer regional</option>
+              <option value="remote">Remote</option>
+              <option value="very-remote">Very remote</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="condition">Long-term condition</label>
+            <select id="condition" name="condition">
+              <option value="all">All conditions</option>
+              <option value="heart-disease" selected>Heart disease</option>
+              <option value="diabetes">Diabetes</option>
+              <option value="arthritis">Arthritis</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-body">
+        <div class="step-title">How should we compare?</div>
+        <div class="fields">
+          <div class="field">
+            <label for="compare">Compare by</label>
+            <select id="compare" name="compare">
+              <option value="income">Income group</option>
+              <option value="insurance" selected>Private health insurance</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="sort">Sort by</label>
+            <select id="sort" name="sort">
+              <option value="group">Group</option>
+              <option value="highest-percent" selected>Highest % delayed</option>
+              <option value="most-people">Most people delayed</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="submit" class="button button-big button-main">Apply</button>
+      <a class="button button-big" href="2B_cost_barriers.html">Reset</a>
+    </div>
+    <p class="hint">Reset clears all your choices and shows the page as it first opened.</p>
+    <p class="hint">To print your result, press Ctrl+P (Windows) or Cmd+P (Mac).</p>
+
+  </form>
+</section>
+
+<section>
+  <h2>Your results</h2>
+  <!-- SAMPLE: this line comes from the database later -->
+  <p>Showing results for: Specialist, ages 65 to 74, heart disease, all areas, compared by private health insurance (680 people)</p>
+
+  <!-- SAMPLE: this sentence is worked out from the data later -->
+  <div class="summary-card">
+    <p>People without private health insurance were about 2.5 times more likely to put off a specialist because of cost.</p>
+  </div>
+
+  <!-- SAMPLE: groups, numbers and bar widths come from the database later -->
+  <div class="stat-row">
+    <div class="stat-card">
+      <div class="stat-name">No private health insurance</div>
+      <div class="stat-figure figure-orange">23%</div>
+      <div>delayed because of cost (61 of 268 people)</div>
+      <div class="bar">
+        <div class="bar-fill fill-orange" style="width: 76%"></div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-name">Private health insurance</div>
+      <div class="stat-figure figure-green">9%</div>
+      <div>delayed because of cost (38 of 412 people)</div>
+      <div class="bar">
+        <div class="bar-fill fill-green" style="width: 31%"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SAMPLE: rows come from the database later -->
+  <div class="table-card table-gap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Group</th>
+          <th>Needed the service</th>
+          <th>Delayed due to cost</th>
+          <th>% delayed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>No private health insurance</td>
+          <td>268</td>
+          <td>61</td>
+          <td class="strong">22.8%</td>
+        </tr>
+        <tr>
+          <td>Private health insurance</td>
+          <td>412</td>
+          <td>38</td>
+          <td class="strong">9.2%</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="note">People who did not need the service, or did not answer, are left out.</p>
+    <p class="note">Source: Patient Experiences Survey data, 2020-21 to 2024-25 (synthetic data based on ABS statistics).</p>
+  </div>
+</section>
+
+  </main>
+</body>
+</html>

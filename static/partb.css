@@ -1,0 +1,361 @@
+/* Part B styles: 1B Our Mission, 2B Cost Barriers, 3B Access and Equity */
+
+/* Headings and text */
+
+h1 {
+  margin: 0 0 8px 0;
+  font-size: 44px;
+  line-height: 1.15;
+}
+
+h2 {
+  margin: 0 0 20px 0;
+  font-size: 30px;
+}
+
+.lead {
+  margin: 0;
+  font-size: 24px;
+}
+
+.panel {
+  background-color: white;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.panel p {
+  margin: 0;
+}
+
+.panel summary {
+  margin-top: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #1b6b4f;
+}
+
+.panel details p {
+  margin-top: 8px;
+}
+
+/* 1B: how to use this website */
+
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tile {
+  flex: 1;
+  min-width: 250px;
+  background-color: white;
+  border-radius: 16px;
+  padding: 24px;
+  font-size: 22px;
+}
+
+.tile strong {
+  display: block;
+  font-size: 26px;
+  margin: 12px 0 4px 0;
+}
+
+.step-number {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #1b6b4f;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 56px;
+}
+
+/* 1B: persona cards */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.persona {
+  flex: 1;
+  min-width: 340px;
+  display: flex;
+  gap: 20px;
+  background-color: white;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.persona img {
+  width: 140px;
+  min-width: 140px;
+  height: 140px;
+  border-radius: 12px;
+}
+
+.persona h3 {
+  margin: 0 0 8px 0;
+  font-size: 26px;
+}
+
+.persona p {
+  margin: 0 0 12px 0;
+}
+
+.persona summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #1b6b4f;
+}
+
+/* Tables (1B team table, 2B results table) */
+
+.table-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 8px 8px 16px 8px;
+  overflow-x: auto;
+}
+
+.table-gap {
+  margin-top: 20px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 22px;
+}
+
+.data-table th {
+  padding: 16px;
+  border-bottom: 3px solid #14262e;
+}
+
+.data-table td {
+  padding: 16px;
+  border-bottom: 1px solid #c9d6de;
+}
+
+.note {
+  margin: 12px 0 0 0;
+  padding: 0 16px;
+  font-size: 18px;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+/* 2B and 3B: help box and form */
+
+.help {
+  background-color: white;
+  border-left: 8px solid #1b6b4f;
+  border-radius: 16px;
+  padding: 20px 24px;
+}
+
+.help h3 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+}
+
+.help p {
+  margin: 0;
+}
+
+.step {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  background-color: white;
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 20px;
+}
+
+.step-body {
+  flex: 1;
+  min-width: 280px;
+}
+
+.step-title {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.step select {
+  width: 100%;
+  height: 56px;
+  padding: 0 12px;
+  font-size: 20px;
+  border: 2px solid #5b7280;
+  border-radius: 10px;
+  background-color: white;
+  color: #14262e;
+}
+
+.fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.field {
+  flex: 1;
+  min-width: 200px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.button-big {
+  height: 64px;
+  line-height: 60px;
+  padding: 0 48px;
+  font-size: 24px;
+  border-radius: 32px;
+}
+
+.button-main {
+  background-color: #1b6b4f;
+  border-color: #1b6b4f;
+  color: white;
+}
+
+.hint {
+  margin: 12px 0 0 0;
+  font-size: 18px;
+}
+
+/* 2B results: summary card and group cards with bars */
+
+.summary-card {
+  background-color: #14262e;
+  color: white;
+  border-radius: 16px;
+  padding: 28px;
+  margin-top: 20px;
+}
+
+.summary-card p {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.35;
+}
+
+.stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.stat-name {
+  font-weight: bold;
+}
+
+.stat-figure {
+  margin: 12px 0;
+  font-size: 64px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.figure-orange {
+  color: #a85a00;
+}
+
+.figure-green {
+  color: #1b6b4f;
+}
+
+.bar {
+  height: 24px;
+  margin-top: 12px;
+  background-color: #dfe8ee;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 24px;
+  border-radius: 12px;
+}
+
+.fill-orange {
+  background-color: #c26a00;
+}
+
+.fill-green {
+  background-color: #1b6b4f;
+}
+
+/* 3B results: profile cards */
+
+.profile-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.profile {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.profile h3 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.count {
+  margin: 4px 0 8px 0;
+}
+
+.measure {
+  margin-top: 16px;
+}
+
+.measure-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.measure-label strong {
+  font-size: 24px;
+}
